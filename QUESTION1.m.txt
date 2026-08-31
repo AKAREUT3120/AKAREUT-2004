@@ -1,0 +1,23 @@
+clc;
+clear;
+Students=readtable('C:\Users\Irene\Desktop\GROUP 4\GROUP 4.xlsx');
+disp(Students);
+
+writetable(Students,'Group 4.xlsx');
+
+figure;
+numberof_siblings_plot=bar(Students.NUMBEROFSIBLINGS);
+title('NUMBEROFSIBLINGS of Students');
+xlabel('Student');
+ylabel('NUMBEROFSIBLING')
+grid on;
+saveas(gcf, 'Students by no. of siblings.png');
+
+figure
+xlabel('Students');
+age_plot=bar(Students.AGE);
+title('AGE of students');
+ylabel('AGE');
+grid on;
+saveas(gcf, 'Students_by_Age.png');
+
